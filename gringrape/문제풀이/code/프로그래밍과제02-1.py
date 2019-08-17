@@ -11,6 +11,7 @@ def countPairs(data, start, end, K):
             return countPairs(data, start + 1, end - 1, K) + 1
         else:
             return countPairs(data, start + 1, end, K)
+            
 # 재귀함수에서 시간복잡도의 계산
 # 1. 한번의 단계에서 몇개의 함수를 재호출하는지
 # 2. 몇단계 인지
