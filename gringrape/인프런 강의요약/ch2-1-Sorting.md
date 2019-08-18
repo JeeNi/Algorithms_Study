@@ -47,3 +47,4 @@
 #### 세가지 정렬방법의 시간 비교
 - insertion sort 의 경우 selection sor나 bubble sort와 다르게 비교 연산이 항상 고정된 횟수로 일어나지 않는다.
 - insertion sort 가 다른 두 정렬 알고리즘에 비해 시간적으로 유리하다.
+
