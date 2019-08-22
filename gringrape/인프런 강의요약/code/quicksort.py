@@ -20,8 +20,8 @@ def quicksort(start, end, targetList):
         quicksort(start, seg - 1, targetList)
         quicksort(seg, end, targetList)
 
-# testcase1. -> fail
-aList = [10, 7, 9, 4, 1, 11, 25, 6]
+# # testcase1. -> success
+# aList = [10, 7, 9, 4, 1, 11, 25, 6]
 
 # # testcase2. -> success
 # aList = [4, 1, 29, 3, 2, 5, 11]
@@ -29,6 +29,6 @@ aList = [10, 7, 9, 4, 1, 11, 25, 6]
 # # testcase3. -> success  
 # aList = [10, 2, 6, 7, 40, 23, 11, 5, 8, 9]
 
-# testcase tester
-quicksort(0, len(aList) - 1, aList)
-print(aList)
+# # testcase tester
+# quicksort(0, len(aList) - 1, aList)
+# print(aList)
