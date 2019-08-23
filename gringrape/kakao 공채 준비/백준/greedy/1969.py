@@ -27,7 +27,7 @@ fo = open("input1969.txt", "r")
 N, l = map(int, fo.readline().split())
 strings = fo.read().splitlines()
 
-ans = ""
+ans = []
 s = 0
 
 # global
@@ -51,8 +51,16 @@ for ch in range(l):
             disMin = dis
             sel = strings[st][ch]
     # local -> global
-    ans += sel
+    ans.append(sel)
     s += disMin
     
-print(ans)
+print(''.join(ans))
 print(s)
+
+# # input
+# import sys
+
+N, l = map(int, sys.stdin.readline().split())
+strings = []
+for i in range(N):
+    strings.append(sys.stdin.readline())
