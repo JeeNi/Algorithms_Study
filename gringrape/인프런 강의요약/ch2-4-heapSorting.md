@@ -24,6 +24,67 @@
   - 부모: [i / 2]
   - 자식: 2 * i , 2 * i + 1
 
-### max heapify
-- max heap property를 만족하도록 해준다.
-- 부모 노드에 저장된 값이 자식노드의 값들 중 큰 쪽보다 작을 때, 값을 교환한다.
+### max-heapify
+
+- 조건
+	- max heap property를 만족하도록 해준다.
+	- 부모 노드의 값은 자식노드의 값 보다 크거나 같다.
+- 실행
+	1. 현재 노드의 값이 자식노드의 값 들 중 큰 쪽보다 작을 때, 큰 쪽과 값을 교환한다.
+	2. 현재 노드의 값이 자식노드의 값 들 보다 클 때, 수행을 종료한다. 
+
+### max-heapify  pseudo code (recursive)
+```
+MAX-HEAPIFY(A,i) {
+	if there is no child of A[i]
+		return
+	k <- the index of the biggest child
+	if A[k] =< A[i]
+		return
+	exchange A[i] and A[k]
+	MAX-HEAPIFY(A,k)
+}
+```
+
+### max-heapify 구현
+####  대상 heap
+![](./images/maxheapifyEx.png)
+
+#### code (recursive)
+
+```python
+def maxHeapify(A, i):
+    left = 2 * i
+    right = 2 * i + 1
+
+    # no child
+    if left >= len(A):
+        return
+        
+    # biggest child
+    if left == len(A) - 1:
+        k = left
+    elif A[left] <= A[right]:
+        k = right
+    else:
+        k = left
+        
+    # parent bigger than the biggest child
+    if A[i] >= A[k]:
+        return
+        
+    # exchange
+    temp = A[i]
+    A[i] = A[k]
+    A[k] = temp
+    maxHeapify(A, k)
+```
+
+### max heapify 연산의 시간복잡도
+- 재귀 호출
+	- 한 번의 재귀 호출에서 일어나는 연산: 상수
+	- 호출이 일어나는 횟수 
+		- 총 노드의 수 : n
+		- 호출 횟수 : log2(n) 
+- 시간 복잡도 = O(logn) 
+
