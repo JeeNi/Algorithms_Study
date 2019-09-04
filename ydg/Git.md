@@ -1,6 +1,6 @@
 # Git
 
-참조 : [티스토리 - 개발하는 두더지](https://duzi077.tistory.com/127), [깃헙io](https://rogerdudler.github.io/git-guide/index.ko.html)
+참조 : [티스토리 - 개념](https://duzi077.tistory.com/127), [깃헙io-개념](https://rogerdudler.github.io/git-guide/index.ko.html). [깃헙io-pull request](https://wayhome25.github.io/git/2017/07/08/git-first-pull-request-story/)
 
 ## 시작
 
@@ -44,9 +44,19 @@ git checkout ABC                                   //HEAD 옮기기 Master -> AB
 
 ```
 //현재 ABC에서 코딩을 한 후 작업이 완료되었다고 가정
+//conflict는 발생하지 않는다고 가정
 git add . 
 git commit -m "Finish"
+git push origin ABC                          //ABC 브랜치에서 원격으로 push
+
+//이후 Github의 Pull Request 탭에 가면 새로운 Pull Request(이하 PR)이 생성되어있음
+//초록색 Compare & pull request 버튼을 통해 PR 생성
+//관리자가 PR을 보고 Merge 여부를 결정
 ```
+
+**Pull Request(PR)**
+
+PR의 목적은 코드 리뷰이다. 코드를 무분별하게 Merge하여 반영하는 것이 아닌 관리자가 PR을 보고 Merge를 하게 된다. (자세한 내용은 상단 참고링크를 활용)
 
 
 
