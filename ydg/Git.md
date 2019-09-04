@@ -50,6 +50,14 @@ git commit -m "Finish"
 
 
 
+### 삭제
+
+```
+git push origin --delete ABC
+```
+
+
+
 
 
 
