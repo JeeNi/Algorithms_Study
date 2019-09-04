@@ -49,10 +49,20 @@ git add .
 git commit -m "Finish"
 git push origin ABC                          //ABC 브랜치에서 원격으로 push
 
-//이후 Github의 Pull Request 탭에 가면 새로운 Pull Request(이하 PR)이 생성되어있음
-//초록색 Compare & pull request 버튼을 통해 PR 생성
-//관리자가 PR을 보고 Merge 여부를 결정
+Github에 반영하기
+방법1
+1-1. Github -> Pull Request 탭 -> Pull Request이 생성되어있음
+1-2. 초록색 Compare & pull request 버튼을 통해 PR 생성
+
+방법2
+2-1. Github의 자신의 브랜치로 이동하여 New pull request 클릭
+2-2. PR 작성 후 Create pull request 클릭
+
+관리자가 PR을 보고 Merge 여부를 결정 
+- Pull request 탭에 들어가면 요청이 와있음. Merge pull request 클릭
 ```
+
+
 
 **Pull Request(PR)**
 
@@ -65,10 +75,3 @@ PR의 목적은 코드 리뷰이다. 코드를 무분별하게 Merge하여 반�
 ```
 git push origin --delete ABC
 ```
-
-
-
-
-
-
-
