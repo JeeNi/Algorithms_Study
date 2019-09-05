@@ -7,7 +7,7 @@ def calh(citations):
     return h 
 
 # test 
-citations = [3, 0, 1, 0, 0, 0, 0, 10, 3, 4, 5]
+citations = [3, 0, 1, 0, 0, 0, 0, 10, 3, 4, 5, 6]
 print(calh(citations))
 
 # 교훈
