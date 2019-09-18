@@ -19,7 +19,6 @@ for i in range(1, k + 1):
 sortedArray = [0 for i in range(len(array))]
 for target in array[::-1]:
   newPos = accCount[target] - 1
-  print(newPos)
   accCount[target] -= 1
   sortedArray[newPos] = target
 

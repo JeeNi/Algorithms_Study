@@ -20,12 +20,11 @@ for d in range(2, -1, -1):
   for i in range(1, k + 1):
     accCount[i] = accCount[i - 1] + count[i]
 
-  # sorting using accumulated sum of count
+  # sorting using accumulated sum of count - o.k.
   sortedArray = [0 for i in range(len(stringData))]
   for strNum in stringData[::-1]:
     target = int(strNum[d])
     newPos = accCount[target] - 1
     accCount[target] -= 1
     sortedArray[newPos] = strNum
-  print(sortedArray)
   stringData = sortedArray
